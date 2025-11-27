@@ -1,55 +1,60 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report:
+- Version change: Initial creation -> 1.0.0
+- List of modified principles:
+  - I. Test-First Development (TDD)
+  - II. Python Type Hinting
+  - III. Code Quality & Readability
+  - IV. Architectural Decision Records (ADR)
+  - V. Object-Oriented Programming (OOP) Principles
+  - VI. Technical Stack
+- Added sections:
+  - Quality Requirements
+- Removed sections: None
+- Templates requiring updates:
+  - .specify/templates/plan-template.md (⚠ pending)
+  - .specify/templates/spec-template.md (⚠ pending)
+  - .specify/templates/tasks-template.md (⚠ pending)
+  - Commands files in .specify/templates/commands/ (⚠ pending)
+  - Runtime guidance docs (e.g., README.md, docs/quickstart.md) (⚠ pending)
+- Follow-up TODOs:
+  - [SECTION_3_NAME] and [SECTION_3_CONTENT] are intentionally left as placeholders for future definition.
+-->
+# hello_aidd Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Test-First Development (TDD)
+All new features and bug fixes must follow a Test-Driven Development (TDD) approach. Tests are written and approved before implementation begins, strictly adhering to the Red-Green-Refactor cycle.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Python Type Hinting
+All Python code must use type hints where appropriate for improved readability, maintainability, and early bug detection. Python 3.12+ features should be leveraged.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Code Quality & Readability
+Code must be clean, well-structured, and easy to understand. Adherence to established coding standards and best practices is mandatory to ensure high code quality. Specifically, all Python code must adhere to [PEP 8](https://www.python.org/dev/peps/pep-0008/) style guidelines, enforced by automated linting tools like `Flake8` or `Ruff` within Continuous Integration (CI) pipelines.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Architectural Decision Records (ADR)
+Significant architectural decisions, including their reasoning, alternatives considered, and trade-offs, must be documented using Architectural Decision Records (ADRs).
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Object-Oriented Programming (OOP) Principles
+Adherence to fundamental Object-Oriented Programming principles such as SOLID, DRY (Don't Repeat Yourself), and KISS (Keep It Simple, Stupid) is required to ensure robust and maintainable code.
 
-### [PRINCIPLE_6_NAME]
+### VI. Technical Stack
+The primary technical stack includes Python 3.12+ with 'uv' as the package manager and 'pytest' for testing. All project files must be version-controlled using Git.
 
+## Quality Requirements
 
-[PRINCIPLE__DESCRIPTION]
-
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
-
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+All unit and integration tests must pass successfully.
+Code coverage must be at least 80%.
+Dataclasses should be used for defining data structures to leverage their benefits in type hinting and immutability.
 
 ## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
 
 [SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+The project constitution serves as the foundational document for all development practices. All Pull Requests (PRs) and code reviews must ensure compliance with these principles. Any amendments to this constitution require proper documentation, approval, and a clear migration plan.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.1 | **Ratified**: 2025-11-27 | **Last Amended**: 2025-11-27
+
